@@ -4,7 +4,6 @@
 
 ![demo](.github/assets/demo.gif)
 
-
 ## 概要
 
 ![image](.github/assets/arch.jpg)
@@ -12,6 +11,7 @@
 human-mcpは、AIアシスタントが人間の能力を活用できるようにするMCPサーバーです。AIアシスタントからのリクエストを受け取り、人間に指示を表示し、人間からの応答をAIアシスタントに返します。
 
 主な機能：
+
 - MCPクライアントからのツール実行リクエスト (STDIN経由) を受け付ける
 - 実行に必要な指示をSQLiteデータベースに書き込む
 - StreamlitアプリケーションがSQLiteを監視し、人間に指示を表示、応答入力を促す
@@ -28,7 +28,6 @@ human-mcpは、AIアシスタントが人間の能力を活用できるように
 6. **human_nose_tool**: 人間が鼻を使って匂いを確認します。
 7. **human_taste_tool**: 人間が口を使って食べ物を味わい、その味を説明します。
 
-
 ## セットアップ
 
 ### 前提条件
@@ -40,18 +39,21 @@ human-mcpは、AIアシスタントが人間の能力を活用できるように
 ### インストール手順
 
 1. リポジトリをクローン
+
    ```bash
    git clone https://github.com/yourusername/human-mcp.git
    cd human-mcp
    ```
 
 2. 仮想環境を作成して有効化
+
    ```bash
    uv venv
    source .venv/bin/activate
    ```
 
 3. 依存関係をインストール
+
    ```bash
    uv pip install .
    ```
@@ -59,11 +61,13 @@ human-mcpは、AIアシスタントが人間の能力を活用できるように
 ## 使用方法
 
 0. MCPサーバーをインストール
+
   ```bash
   task install-mcp
   ```
 
 1. ClaudeからMCPサーバーに接続
+
    ```json
    "human-mcp": {
      "command": "uv",
@@ -79,11 +83,12 @@ human-mcpは、AIアシスタントが人間の能力を活用できるように
    ```
 
 3. 2つ目のターミナルでStreamlit UIを起動
+
    ```bash
    task run-streamlit
    ```
 
-4. ブラウザで表示されるStreamlit UIにアクセス（通常は http://localhost:8501 ）
+4. ブラウザで表示されるStreamlit UIにアクセス（通常は <http://localhost:8501> ）
 
 5. MCPクライアント（例：Claude Desktop）からリクエストを送信すると、Streamlit UIにタスクが表示されます。
 
@@ -91,7 +96,7 @@ human-mcpは、AIアシスタントが人間の能力を活用できるように
 
 ## プロジェクト構造
 
-```
+```txt
 human-mcp/
 ├── human_mcp/              # メインのPythonパッケージ
 │   ├── __init__.py         # パッケージマーカー
@@ -111,3 +116,11 @@ MIT
 ## 注意事項
 
 このプロジェクトはジョーク用途を想定しています。実際の運用では、人間のオペレーターの負担や、応答の遅延などを考慮する必要があります。
+
+## Streamlit 上的演示
+
+[Click here](https://quanngynx-human-mcp-human-mcpmcp-server-yq1kru.streamlit.app/)
+
+## リソース
+
+[human-mcp](https://playbooks.com/mcp/upamune-human)
